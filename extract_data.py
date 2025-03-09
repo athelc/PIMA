@@ -4,7 +4,18 @@ import os
 import sys
 import numpy as np
 
+#Constant that represents the number of samples we want to extract 
+#(the total that exists for our dataset is 574)
+NB_SAMPLES = 1 #because we start to count at zero here we have 2 samples
+
 def make_dir(directory_name):
+    """
+    Gets a directory_name and creates it.Returns the error in case of failure
+
+    Parameters:
+    directory_name(string) : the directory name we wish to have
+
+    """
     try:
         os.mkdir(directory_name)
         print(f"Directory '{directory_name}' created successfully.")
@@ -16,7 +27,17 @@ def make_dir(directory_name):
         print(f"An error occurred: {e}")
         
 
+
 def transform_data(destination_directory,source_directory):
+    """
+    Finds the data from the files for a specific number of samples.
+    Transforms them from .ima to .nii
+    
+    Parameters:
+    destination_directory : the name of the directory we want out data to be extracted 
+    source_directory : the name of the folder containing the data we want to extract
+    """
+
     #Creattes the destinanion directory if it does not exist 
     make_dir(destination_directory)
 
@@ -37,13 +58,18 @@ def transform_data(destination_directory,source_directory):
                 pass
     
 
-nb_samples = 1
+
 if __name__=="__main__":
+
     if len(sys.argv) > 2:
+
         destination_directory = sys.argv[1]
         source_directory =  sys.argv[2]
+
+        #for all the folders that we have in this directory we get and transform the first one
         for count, name in enumerate(sorted(os.listdir(source_directory))):
-            if count > nb_samples : break
+
+            if count > NB_SAMPLES  : break
             
             dest = destination_directory+"/"+name
             src = source_directory+name+"/"+os.listdir(source_directory+"/"+name)[0]

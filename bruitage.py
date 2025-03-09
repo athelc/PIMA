@@ -6,7 +6,17 @@ import matplotlib.pyplot as plt
 import sys
 from scipy.stats import rice
 
+
 def bruitage_salt_pepper(I):
+    """
+    Adds to the image a salt and pepper noise
+
+    Parameters :
+    I : numpy array containing the image we want to add the noise to
+
+    Returns :
+    I_new : numpy array of the noised image
+    """
     n,m = I.shape
     I_new = I.copy()
     dynamic_range = np.max(I)
@@ -17,7 +27,18 @@ def bruitage_salt_pepper(I):
 
 
 def bruitage_racien(image,b = 0,loc=0,scale=1):
-    
+    """
+    Adds to the image a racien noise
+
+    Parameters :
+    image : numpy array of the image
+    b : shape parameter for b
+    loc : for shifting the dencity function
+    scale : for scaling the dencity function
+
+    Returns :
+    The noised image
+    """ 
     noise = rice.rvs(b, loc=loc, scale=scale, size=image.shape)
     noisy_image = np.clip(image+noise, 0, 255)
     
