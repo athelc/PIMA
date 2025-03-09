@@ -6,7 +6,15 @@ import sys
 import bruitage 
 
 def imshowmult(images=[],max_im = 5,save_image = False,ofilename = ""):
-    
+    """
+    Shows the array of images in a gray scale rotated by 90deg and saves them
+
+    Parameters :
+    images : array of numpy arrays of images
+    max_im : the number of maximum images per line
+    save_image : boolean that indicates if we want to save the plot or not
+    ofilename : the filename of the image we want to have
+    """
     max_images_per_row = max_im
     num_images = len(images)
     num_rows = math.ceil(num_images / max_images_per_row)
@@ -29,6 +37,15 @@ def imshowmult(images=[],max_im = 5,save_image = False,ofilename = ""):
 
 
 def loadImg(filename):
+    """
+    Loads and converts in numpy array the image
+
+    Parameters :
+    filename : (string) the path of our image of type .nii
+
+    Returns :
+     : numpy array of the image
+    """
     return np.array((nib.load(filename)).dataobj)
 
 if __name__=="__main__":
