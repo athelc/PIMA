@@ -7,7 +7,7 @@ The first step is to download the dataset from [Mendeley Data](https://data.mend
 
 ```bash
 #python3 extract_data.py path_to_dataset path_to_destination_folder
-python extract_data.py ./MRI_Data/01_MRI_Data ./test
+python extract_data.py ./MRI_Data/01_MRI_Data/ ./test
 ```
 ## Visualization
 visualize the data, you need to provide a .nii file as input. Use the following command:

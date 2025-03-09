@@ -53,6 +53,7 @@ def transform_data(destination_directory,source_directory):
             print(name)
             #we convert this data from .ima to .nii
             try:
+                #dicom2nifti.dicom_series_to_nifti(source_directory, destination_directory, reorient_nifti=True)
                 dicom2nifti.convert_directory(source_directory, destination_directory,reorient=True, compression=False)
             except:
                 pass
@@ -62,13 +63,13 @@ def transform_data(destination_directory,source_directory):
 if __name__=="__main__":
 
     if len(sys.argv) > 2:
-
-        destination_directory = sys.argv[1]
-        source_directory =  sys.argv[2]
+        print("in the fun")
+        
+        source_directory =  sys.argv[1]
+        destination_directory = sys.argv[2]
 
         #for all the folders that we have in this directory we get and transform the first one
         for count, name in enumerate(sorted(os.listdir(source_directory))):
-
             if count > NB_SAMPLES  : break
             
             dest = destination_directory+"/"+name
