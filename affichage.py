@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import sys
 import bruitage 
 
-def imshowmult(images=[],max_im = 5,save_image = False,ofilename = ""):
+def imshowmult(images=[],labels = [],max_im = 5,save_image = False,ofilename = ""):
     """
     Shows the array of images in a gray scale rotated by 90deg and saves them
 
@@ -19,20 +19,23 @@ def imshowmult(images=[],max_im = 5,save_image = False,ofilename = ""):
     num_images = len(images)
     num_rows = math.ceil(num_images / max_images_per_row)
     
-    fig, ax = plt.subplots(num_rows, max_images_per_row, figsize=(10, 3 * num_rows))
+    fig, ax = plt.subplots(num_rows, max_images_per_row, figsize=(100, 3 * num_rows))
     
     ax = ax.flatten()
 
     for i in range(num_images):
         ax[i].imshow(np.rot90(images[i]), cmap='gray')
+        if i < len(labels):
+             ax[i].set_title(labels[i], fontsize=10, loc='center', pad=10) 
         ax[i].axis('off')  
     
     for i in range(num_images, len(ax)):
         ax[i].axis('off')
-    
+
     if save_image :
         #ofilename = 'output_image.png' : example of ofilename
         plt.savefig(ofilename, dpi=300)
+    
     plt.show()
 
 
@@ -55,6 +58,6 @@ if __name__=="__main__":
         #imshowmult(img)
         img_salt_pepper = bruitage.bruitage_salt_pepper(img[0])
         img_racien = bruitage.bruitage_racien(img[0],1)
-        imshowmult([img[0],img_salt_pepper,img[0],img_racien],2)
+        imshowmult([img[0],img_racien],["Image originale","Image avec bruit ricien"],2,True,"bruitage_racien.png") #img_salt_pepper,img[0]
 
 
