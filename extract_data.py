@@ -1,12 +1,12 @@
 import dicom2nifti
 import dicom2nifti.settings as settings
 import os
-import sys
+import sys                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 import numpy as np
 
 #Constant that represents the number of samples we want to extract 
 #(the total that exists for our dataset is 574)
-NB_SAMPLES = 1 #because we start to count at zero here we have 2 samples
+NB_SAMPLES = 10 #because we start to count at zero here we have 2 samples
 
 def make_dir(directory_name):
     """
@@ -67,7 +67,7 @@ if __name__=="__main__":
         
         source_directory =  sys.argv[1]
         destination_directory = sys.argv[2]
-
+                                                                                                                        
         #for all the folders that we have in this directory we get and transform the first one
         for count, name in enumerate(sorted(os.listdir(source_directory))):
             if count > NB_SAMPLES  : break
@@ -78,4 +78,3 @@ if __name__=="__main__":
         
     else:
         print("Not enough arguments provided.")
-
