@@ -43,3 +43,15 @@ def bruitage_racien(image,b = 0,loc=0,scale=1):
     noisy_image = np.clip(image+noise, 0, 255)
     
     return noisy_image
+
+"""
+The data that we noise we know that are images
+"""
+def noise_all_data(fnoise,data):
+    assert data.ndim == 3,"Wrong type of data"
+    noised = []
+    for im in data: 
+        noised.append(fnoise(im))
+    noised = np.array(noised)
+    return noised   
+
