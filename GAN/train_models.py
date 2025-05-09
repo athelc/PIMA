@@ -13,7 +13,7 @@ from necessary_functions import *
 from discriminator import *
 from generator_Denoiser import *
 
-device = device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 lr = 0.0002
 NB_FEATURES = 384
 
@@ -69,7 +69,7 @@ def train(data_loader,num_epochs,g_model,d_model,r_model,nb_feat,alpha,n_critic,
                 fake_real = format_data(fake_data_noised,denoised)
                 fake_real_out = d_model(fake_real)
                 #print("this done 3")
-                #(x,y_hat) : real fake
+                #(x,y_hat) : real faket
                 real_fake = format_data(noised,fake_data_denoised)
                 real_fake_out = d_model(real_fake)
                 #ipdb.set_trace()
@@ -87,8 +87,8 @@ def train(data_loader,num_epochs,g_model,d_model,r_model,nb_feat,alpha,n_critic,
                 optimizer_d.step()
                 #ipdb.set_trace()
                 # Print losses
-                if i % 100 == 0:
-                    print(f'Epoch [{e+1}/{num_epochs}], Step [{n}/{n_critic}], '
+                if i % len(noised) == 0:
+                    print(f'Epoch [{e+1}/{num_epochs}], Step [{n+1}/{n_critic}], '
                       f'Discriminator Loss: {d_loss.item():.4f}')
         
         if avg_loss :

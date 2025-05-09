@@ -117,7 +117,7 @@ def accuracy(dataloader,generator,denoiser):
 
 if __name__=="__main__":
 
-    test_dataloader,test_batch_size = load_dataloader('./datald/25pat_8b_train')
+    test_dataloader,test_batch_size = load_dataloader('./datald/25pat_8_test')
 
     generator = GRModel(240,1)
     denoiser = GRModel(240,1)
@@ -128,6 +128,11 @@ if __name__=="__main__":
     generator.load_state_dict(torch.load('./models/230_7_batch_10_epochs/g_model_230.pth', map_location=torch.device('cpu')))
     denoiser.load_state_dict(torch.load('./models/230_7_batch_10_epochs/r_model_230.pth', map_location=torch.device('cpu')))
 
+    #generator.load_state_dict(torch.load('./models/g_model.pth', map_location=torch.device('cpu')))
+    #denoiser.load_state_dict(torch.load('./models/r_model.pth', map_location=torch.device('cpu')))
+
+
     print_sample_of_result(test_dataloader,generator,denoiser)
-    print("The accuracy : (denoiser,generator)",accuracy(test_dataloader,generator,denoiser))
-    #training_results('./models/230_7_batch_10_epochs')
+    #print("The accuracy : (denoiser,generator)",accuracy(test_dataloader,generator,denoiser))
+    training_results('./models/230_7_batch_10_epochs')
+    #training_results('./models/')
