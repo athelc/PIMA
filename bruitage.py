@@ -26,15 +26,15 @@ def bruitage_salt_pepper(I):
     return I_new  
 
 
-def bruitage_racien(image,b = 0,loc=0,scale=1):
+def bruitage_ricien(image,b = 0,loc=0,scale=1):
     """
-    Adds to the image a racien noise
+    Adds to the image a ricien noise
 
     Parameters :
     image : numpy array of the image
     b : shape parameter for b
-    loc : for shifting the dencity function
-    scale : for scaling the dencity function
+    loc : for shifting the density function
+    scale : for scaling the density function
 
     Returns :
     The noised image
@@ -44,10 +44,17 @@ def bruitage_racien(image,b = 0,loc=0,scale=1):
     
     return noisy_image
 
-"""
-The data that we noise we know that are images
-"""
 def noise_all_data(fnoise,data):
+    """
+    Function applying a noise function to a set of images
+
+    Parameters:
+        fnoise : the noise to apply
+        data: 3D array containing images
+
+    Returns :
+    Numpy array of noised images
+    """ 
     assert data.ndim == 3,"Wrong type of data"
     noised = []
     for im in data: 

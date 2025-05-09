@@ -6,7 +6,7 @@ import numpy as np
 
 #Constant that represents the number of samples we want to extract 
 #(the total that exists for our dataset is 574)
-NB_SAMPLES = 25 #because we start to count at zero here we have 2 samples
+NB_SAMPLES = 25 #because we start to count at zero here we have 25 samples
 
 def make_dir(directory_name):
     """

@@ -1,0 +1,106 @@
+python GAN/train_models.py
+please give the filename of the data : testing_preprocess_train
+please give a destination filename : Output
+Please give a the number of epochs you want : 20
+Enter the alpha wished between 0 and 1 ex. 0.5 : 0.5
+Please give a the number of n_critics you want : 1
+epoch 0 done
+critic 0 done
+Epoch [1/20], Step [0/1], Discriminator Loss: -0.5736
+We go here
+Epoch [1/20], R : Denoiser Loss: 0.5909
+epoch 1 done
+critic 0 done
+Epoch [2/20], Step [0/1], Discriminator Loss: -0.8419
+We go here
+Epoch [2/20], R : Denoiser Loss: 0.6288
+epoch 2 done
+critic 0 done
+Epoch [3/20], Step [0/1], Discriminator Loss: -0.9234
+We go here
+Epoch [3/20], R : Denoiser Loss: 0.6406
+epoch 3 done
+critic 0 done
+Epoch [4/20], Step [0/1], Discriminator Loss: -0.9354
+We go here
+Epoch [4/20], R : Denoiser Loss: 0.6439
+epoch 4 done
+critic 0 done
+Epoch [5/20], Step [0/1], Discriminator Loss: -0.9739
+We go here
+Epoch [5/20], R : Denoiser Loss: 0.6472
+epoch 5 done
+critic 0 done
+Epoch [6/20], Step [0/1], Discriminator Loss: -0.9773
+We go here
+Epoch [6/20], R : Denoiser Loss: 0.6494
+epoch 6 done
+critic 0 done
+Epoch [7/20], Step [0/1], Discriminator Loss: -0.9818
+We go here
+Epoch [7/20], R : Denoiser Loss: 0.6507
+epoch 7 done
+critic 0 done
+Epoch [8/20], Step [0/1], Discriminator Loss: -0.9846
+We go here
+Epoch [8/20], R : Denoiser Loss: 0.6540
+epoch 8 done
+critic 0 done
+Epoch [9/20], Step [0/1], Discriminator Loss: -0.9898
+We go here
+Epoch [9/20], R : Denoiser Loss: 0.6512
+epoch 9 done
+critic 0 done
+Epoch [10/20], Step [0/1], Discriminator Loss: -0.9922
+We go here
+Epoch [10/20], R : Denoiser Loss: 0.6506
+epoch 10 done
+critic 0 done
+Epoch [11/20], Step [0/1], Discriminator Loss: -0.9926
+We go here
+Epoch [11/20], R : Denoiser Loss: 0.6518
+epoch 11 done
+critic 0 done
+Epoch [12/20], Step [0/1], Discriminator Loss: -0.9934
+We go here
+Epoch [12/20], R : Denoiser Loss: 0.6548
+epoch 12 done
+critic 0 done
+Epoch [13/20], Step [0/1], Discriminator Loss: -0.9941
+We go here
+Epoch [13/20], R : Denoiser Loss: 0.6532
+epoch 13 done
+critic 0 done
+Epoch [14/20], Step [0/1], Discriminator Loss: -0.9941
+We go here
+Epoch [14/20], R : Denoiser Loss: 0.6534
+epoch 14 done
+critic 0 done
+Epoch [15/20], Step [0/1], Discriminator Loss: -0.9952
+We go here
+Epoch [15/20], R : Denoiser Loss: 0.6542
+epoch 15 done
+critic 0 done
+Epoch [16/20], Step [0/1], Discriminator Loss: -0.9948
+We go here
+Epoch [16/20], R : Denoiser Loss: 0.6551
+epoch 16 done
+critic 0 done
+Epoch [17/20], Step [0/1], Discriminator Loss: -0.9969
+We go here
+Epoch [17/20], R : Denoiser Loss: 0.6557
+epoch 17 done
+critic 0 done
+Epoch [18/20], Step [0/1], Discriminator Loss: -0.9976
+We go here
+Epoch [18/20], R : Denoiser Loss: 0.6548
+epoch 18 done
+critic 0 done
+Epoch [19/20], Step [0/1], Discriminator Loss: -0.9972
+We go here
+Epoch [19/20], R : Denoiser Loss: 0.6562
+epoch 19 done
+critic 0 done
+Epoch [20/20], Step [0/1], Discriminator Loss: -0.9981
+We go here
+Epoch [20/20], R : Denoiser Loss: 0.6560

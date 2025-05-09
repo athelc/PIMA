@@ -1,0 +1,33 @@
+Epoch [1/5], Step [0/2], Discriminator Loss: -0.5558
+critic 1 done
+Epoch [1/5], Step [1/2], Discriminator Loss: -0.8115
+We go here
+Epoch [1/5], R : Denoiser Loss: 0.6187
+epoch 1 done
+critic 0 done
+Epoch [2/5], Step [0/2], Discriminator Loss: -0.9301
+critic 1 done
+Epoch [2/5], Step [1/2], Discriminator Loss: -0.9696
+We go here
+Epoch [2/5], R : Denoiser Loss: 0.6407
+epoch 2 done
+critic 0 done
+Epoch [3/5], Step [0/2], Discriminator Loss: -0.9633
+critic 1 done
+Epoch [3/5], Step [1/2], Discriminator Loss: -0.9833
+We go here
+Epoch [3/5], R : Denoiser Loss: 0.6511
+epoch 3 done
+critic 0 done
+Epoch [4/5], Step [0/2], Discriminator Loss: -0.9774
+critic 1 done
+Epoch [4/5], Step [1/2], Discriminator Loss: -0.9894
+We go here
+Epoch [4/5], R : Denoiser Loss: 0.6512
+epoch 4 done
+critic 0 done
+Epoch [5/5], Step [0/2], Discriminator Loss: -0.9929
+critic 1 done
+Epoch [5/5], Step [1/2], Discriminator Loss: -0.9933
+We go here
+Epoch [5/5], R : Denoiser Loss: 0.6528

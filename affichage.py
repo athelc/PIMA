@@ -57,7 +57,7 @@ if __name__=="__main__":
         img = loadImg(sys.argv[1])
         #imshowmult(img)
         img_salt_pepper = bruitage.bruitage_salt_pepper(img[0])
-        img_racien = bruitage.bruitage_racien(img[0],1)
-        imshowmult([img[0],img_racien],["Image originale","Image avec bruit ricien"],2,True,"bruitage_racien.png") #img_salt_pepper,img[0]
+        img_racien = bruitage.bruitage_ricien(img[0],1)
+        imshowmult([img[0],img_racien],["Image originale","Image avec bruit ricien"],2,True,"bruitage_ricien.png") #img_salt_pepper,img[0]
 
 

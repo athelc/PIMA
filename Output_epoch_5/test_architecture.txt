@@ -1,0 +1,144 @@
+
+########################Résultats train 1
+
+python GAN/train_models.py
+please give the filename of the data : testing_preprocess_train                                                                        
+please give a destination filename : Output
+Please give a the number of epochs you want : 200
+Enter the alpha wished between 0 and 1 ex. 0.5 : 0.5
+Please give a the number of n_critics you want : 15 
+epoch 0 done
+critic 0 done
+Epoch [1/200], Step [0/15], Discriminator Loss: -0.6007
+critic 1 done
+Epoch [1/200], Step [1/15], Discriminator Loss: -0.9998
+critic 2 done
+Epoch [1/200], Step [2/15], Discriminator Loss: -1.0000
+critic 3 done
+Epoch [1/200], Step [3/15], Discriminator Loss: -1.0000
+critic 4 done
+Epoch [1/200], Step [4/15], Discriminator Loss: -1.0000
+critic 5 done
+Epoch [1/200], Step [5/15], Discriminator Loss: -1.0000
+critic 6 done
+Epoch [1/200], Step [6/15], Discriminator Loss: -1.0000
+critic 7 done
+Epoch [1/200], Step [7/15], Discriminator Loss: -1.0000
+critic 8 done
+Epoch [1/200], Step [8/15], Discriminator Loss: -1.0000
+critic 9 done
+Epoch [1/200], Step [9/15], Discriminator Loss: -1.0000
+critic 10 done
+Epoch [1/200], Step [10/15], Discriminator Loss: -1.0000
+critic 11 done
+Epoch [1/200], Step [11/15], Discriminator Loss: -1.0000
+critic 12 done
+Epoch [1/200], Step [12/15], Discriminator Loss: -1.0000
+critic 13 done
+Epoch [1/200], Step [13/15], Discriminator Loss: -1.0000
+critic 14 done
+Epoch [1/200], Step [14/15], Discriminator Loss: -1.0000
+We go here
+Epoch [1/200], R : Denoiser Loss: 0.6566
+epoch 1 done
+critic 0 done
+Epoch [2/200], Step [0/15], Discriminator Loss: -1.0000
+critic 1 done
+Epoch [2/200], Step [1/15], Discriminator Loss: -1.0000
+critic 2 done
+Epoch [2/200], Step [2/15], Discriminator Loss: -1.0000
+critic 3 done
+Epoch [2/200], Step [3/15], Discriminator Loss: -1.0000
+critic 4 done
+Epoch [2/200], Step [4/15], Discriminator Loss: -1.0000
+critic 5 done
+Epoch [2/200], Step [5/15], Discriminator Loss: -1.0000
+critic 6 done
+Epoch [2/200], Step [6/15], Discriminator Loss: -1.0000
+critic 7 done
+Epoch [2/200], Step [7/15], Discriminator Loss: -1.0000
+critic 8 done
+Epoch [2/200], Step [8/15], Discriminator Loss: -1.0000
+critic 9 done
+Epoch [2/200], Step [9/15], Discriminator Loss: -1.0000
+critic 10 done
+Epoch [2/200], Step [10/15], Discriminator Loss: -1.0000
+critic 11 done
+Epoch [2/200], Step [11/15], Discriminator Loss: -1.0000
+critic 12 done
+Epoch [2/200], Step [12/15], Discriminator Loss: -1.0000
+critic 13 done
+Epoch [2/200], Step [13/15], Discriminator Loss: -1.0000
+critic 14 done
+Epoch [2/200], Step [14/15], Discriminator Loss: -1.0000
+We go here
+Epoch [2/200], R : Denoiser Loss: 0.6566
+epoch 2 done
+critic 0 done
+Epoch [3/200], Step [0/15], Discriminator Loss: -1.0000
+critic 1 done
+Epoch [3/200], Step [1/15], Discriminator Loss: -1.0000
+critic 2 done
+Epoch [3/200], Step [2/15], Discriminator Loss: -1.0000
+critic 3 done
+Epoch [3/200], Step [3/15], Discriminator Loss: -1.0000
+critic 4 done
+Epoch [3/200], Step [4/15], Discriminator Loss: -1.0000
+critic 5 done
+Epoch [3/200], Step [5/15], Discriminator Loss: -1.0000
+^CTraceback (most recent call last):
+  File "/home/cbremond/Codes-LIB/Projet-PIMA/PIMA/GAN/train_models.py", line 189, in <module>
+    d_loss_hist,r_loss_hist,g_loss_hist = train(dataloader,nb_epochs,generator,discriminator,denoiser,NB_FEATURES,alpha,n_critic,loss_fn)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cbremond/Codes-LIB/Projet-PIMA/PIMA/GAN/train_models.py", line 43, in train
+    noised = noised.to(device)
+             ^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+^C
+(base) cbremond@antlia:~/Codes-LIB/Projet-PIMA/PIMA$ ^C
+(base) cbremond@antlia:~/Codes-LIB/Projet-PIMA/PIMA$ 
+
+
+
+###############################################Résultats train 2 : 
+python GAN/train_models.py
+please give the filename of the data : testing_preprocess_train
+please give a destination filename : Output
+Please give a the number of epochs you want : 5
+Enter the alpha wished between 0 and 1 ex. 0.5 : 0.5
+Please give a the number of n_critics you want : 2
+epoch 0 done
+critic 0 done
+Epoch [1/5], Step [0/2], Discriminator Loss: -0.4503
+critic 1 done
+Epoch [1/5], Step [1/2], Discriminator Loss: -0.9977
+We go here
+Epoch [1/5], R : Denoiser Loss: 0.6566
+epoch 1 done
+critic 0 done
+Epoch [2/5], Step [0/2], Discriminator Loss: -0.9989
+critic 1 done
+Epoch [2/5], Step [1/2], Discriminator Loss: -0.9997
+We go here
+Epoch [2/5], R : Denoiser Loss: 0.6564
+epoch 2 done
+critic 0 done
+Epoch [3/5], Step [0/2], Discriminator Loss: -1.0000
+critic 1 done
+Epoch [3/5], Step [1/2], Discriminator Loss: -0.9999
+We go here
+Epoch [3/5], R : Denoiser Loss: 0.6566
+epoch 3 done
+critic 0 done
+Epoch [4/5], Step [0/2], Discriminator Loss: -0.9999
+critic 1 done
+Epoch [4/5], Step [1/2], Discriminator Loss: -1.0000
+We go here
+Epoch [4/5], R : Denoiser Loss: 0.6565
+epoch 4 done
+critic 0 done
+Epoch [5/5], Step [0/2], Discriminator Loss: -1.0000
+critic 1 done
+Epoch [5/5], Step [1/2], Discriminator Loss: -1.0000
+We go here
+Epoch [5/5], R : Denoiser Loss: 0.6566
