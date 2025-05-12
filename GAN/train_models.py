@@ -61,8 +61,8 @@ def train(data_loader, num_epochs, g_model, d_model, r_model, nb_feat, alpha, n_
                 noised = noised.to(device)
                 denoised = denoised.to(device)
 
-                fake_labels = torch.zeros(noised.size(0), 1, device=device)*0.9# faire un label smoothing *0.9 
-                real_labels = torch.ones(noised.size(0), 1, device=device)*0.1# faire un label smoothing *0.1
+                fake_labels = torch.ones(noised.size(0), 1, device=device)*0.3 # faire un label smoothing *0.9 # zeros
+                real_labels = torch.ones(noised.size(0), 1, device=device)*0.7 # faire un label smoothing *0.1
 
                 ########################
                 # Discriminator Training #
