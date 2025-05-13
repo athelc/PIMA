@@ -1,0 +1,147 @@
+We go here
+Epoch [1/30], R : Denoiser Loss: 0.5400
+epoch 1 done
+critic 0 done
+Epoch [2/30], Step [0/1], Discriminator Loss: -0.3020
+We go here
+Epoch [2/30], R : Denoiser Loss: 0.5974
+epoch 2 done
+critic 0 done
+Epoch [3/30], Step [0/1], Discriminator Loss: -0.3360
+We go here
+Epoch [3/30], R : Denoiser Loss: 0.6324
+epoch 3 done
+critic 0 done
+Epoch [4/30], Step [0/1], Discriminator Loss: -0.3660
+We go here
+Epoch [4/30], R : Denoiser Loss: 0.6412
+epoch 4 done
+critic 0 done
+Epoch [5/30], Step [0/1], Discriminator Loss: -0.3784
+We go here
+Epoch [5/30], R : Denoiser Loss: 0.6431
+epoch 5 done
+critic 0 done
+Epoch [6/30], Step [0/1], Discriminator Loss: -0.3851
+We go here
+Epoch [6/30], R : Denoiser Loss: 0.6461
+epoch 6 done
+critic 0 done
+Epoch [7/30], Step [0/1], Discriminator Loss: -0.3828
+We go here
+Epoch [7/30], R : Denoiser Loss: 0.6514
+epoch 7 done
+critic 0 done
+Epoch [8/30], Step [0/1], Discriminator Loss: -0.3911
+We go here
+Epoch [8/30], R : Denoiser Loss: 0.6487
+epoch 8 done
+critic 0 done
+Epoch [9/30], Step [0/1], Discriminator Loss: -0.3966
+We go here
+Epoch [9/30], R : Denoiser Loss: 0.6491
+epoch 9 done
+critic 0 done
+Epoch [10/30], Step [0/1], Discriminator Loss: -0.3958
+We go here
+Epoch [10/30], R : Denoiser Loss: 0.6473
+epoch 10 done
+critic 0 done
+Epoch [11/30], Step [0/1], Discriminator Loss: -0.3955
+We go here
+Epoch [11/30], R : Denoiser Loss: 0.6514
+epoch 11 done
+critic 0 done
+Epoch [12/30], Step [0/1], Discriminator Loss: -0.3943
+We go here
+Epoch [12/30], R : Denoiser Loss: 0.6533
+epoch 12 done
+critic 0 done
+Epoch [13/30], Step [0/1], Discriminator Loss: -0.3974
+We go here
+Epoch [13/30], R : Denoiser Loss: 0.6506
+epoch 13 done
+critic 0 done
+Epoch [14/30], Step [0/1], Discriminator Loss: -0.3963
+We go here
+Epoch [14/30], R : Denoiser Loss: 0.6540
+epoch 14 done
+critic 0 done
+Epoch [15/30], Step [0/1], Discriminator Loss: -0.3977
+We go here
+Epoch [15/30], R : Denoiser Loss: 0.6541
+epoch 15 done
+critic 0 done
+Epoch [16/30], Step [0/1], Discriminator Loss: -0.3971
+We go here
+Epoch [16/30], R : Denoiser Loss: 0.6550
+epoch 16 done
+critic 0 done
+Epoch [17/30], Step [0/1], Discriminator Loss: -0.3960
+We go here
+Epoch [17/30], R : Denoiser Loss: 0.6526
+epoch 17 done
+critic 0 done
+Epoch [18/30], Step [0/1], Discriminator Loss: -0.3978
+We go here
+Epoch [18/30], R : Denoiser Loss: 0.6540
+epoch 18 done
+critic 0 done
+Epoch [19/30], Step [0/1], Discriminator Loss: -0.3991
+We go here
+Epoch [19/30], R : Denoiser Loss: 0.6556
+epoch 19 done
+critic 0 done
+Epoch [20/30], Step [0/1], Discriminator Loss: -0.3988
+We go here
+Epoch [20/30], R : Denoiser Loss: 0.6557
+epoch 20 done
+critic 0 done
+Epoch [21/30], Step [0/1], Discriminator Loss: -0.3977
+We go here
+Epoch [21/30], R : Denoiser Loss: 0.6554
+epoch 21 done
+critic 0 done
+Epoch [22/30], Step [0/1], Discriminator Loss: -0.3991
+We go here
+Epoch [22/30], R : Denoiser Loss: 0.6552
+epoch 22 done
+critic 0 done
+Epoch [23/30], Step [0/1], Discriminator Loss: -0.3988
+We go here
+Epoch [23/30], R : Denoiser Loss: 0.6553
+epoch 23 done
+critic 0 done
+Epoch [24/30], Step [0/1], Discriminator Loss: -0.3987
+We go here
+Epoch [24/30], R : Denoiser Loss: 0.6560
+epoch 24 done
+critic 0 done
+Epoch [25/30], Step [0/1], Discriminator Loss: -0.3987
+We go here
+Epoch [25/30], R : Denoiser Loss: 0.6559
+epoch 25 done
+critic 0 done
+Epoch [26/30], Step [0/1], Discriminator Loss: -0.3995
+We go here
+Epoch [26/30], R : Denoiser Loss: 0.6557
+epoch 26 done
+critic 0 done
+Epoch [27/30], Step [0/1], Discriminator Loss: -0.3994
+We go here
+Epoch [27/30], R : Denoiser Loss: 0.6558
+epoch 27 done
+critic 0 done
+Epoch [28/30], Step [0/1], Discriminator Loss: -0.3990
+We go here
+Epoch [28/30], R : Denoiser Loss: 0.6551
+epoch 28 done
+critic 0 done
+Epoch [29/30], Step [0/1], Discriminator Loss: -0.3988
+We go here
+Epoch [29/30], R : Denoiser Loss: 0.6563
+epoch 29 done
+critic 0 done
+Epoch [30/30], Step [0/1], Discriminator Loss: -0.3996
+We go here
+Epoch [30/30], R : Denoiser Loss: 0.6559
