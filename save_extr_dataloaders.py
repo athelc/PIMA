@@ -11,7 +11,7 @@ def save_dataloader(dataloader,dataset,filename):
     }
     torch.save(dataloader_params, filename+'_params.pth')  # Save parameters
 
-def load_dataloader(filename):
+def load_dataloader(filename,shuffle = True):
     # Load the dataset
     loaded_dataset = torch.load(filename+'.pth', weights_only=True)  # Load the dataset
 
@@ -22,7 +22,7 @@ def load_dataloader(filename):
     loaded_dataloader = DataLoader(
         loaded_dataset,
         batch_size=b_size,
-        shuffle=loaded_dataloader_params['shuffle']
+        shuffle=shuffle#loaded_dataloader_params['shuffle']
     )
     
     return loaded_dataloader,b_size
