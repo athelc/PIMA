@@ -11,7 +11,7 @@ parent_dir = os.path.abspath(os.path.join(current_dir, 'GAN/'))
 sys.path.append(current_dir)  
 sys.path.append(parent_dir) 
 
-import cv2
+#import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 from data_pre_processing import *
@@ -21,80 +21,6 @@ from skimage.metrics import peak_signal_noise_ratio as psnr
 from sklearn.metrics import mutual_info_score as mis
 from scipy.ndimage import gaussian_filter
 from skimage.metrics import structural_similarity as ssim
-
-def training_results(filename):
-    #gets the information of the 
-    data = np.load(filename+'/graph_results.npz')
-
-    # Extract the arrays
-    d_loss = data['array1']
-    r_loss = data['array2']
-    g_loss = data['array3']
-
-    #assert len(d_loss) == len(r_loss) and len(r_loss) == len(d_loss) , "Lengths of losses are not equal"
-
-    figure, axis = plt.subplots(1, 3, figsize=(15, 5))
-
-    # Plotting the Discriminator Loss
-    axis[0].plot(np.arange(len(d_loss)), d_loss, linewidth=1) 
-    axis[0].set_title("Discriminator Loss")
-    axis[0].set_xlabel("Epochs")
-    axis[0].set_ylabel("Loss")
-
-    # Plotting the Generator Loss
-    axis[1].plot(np.arange(len(g_loss)), -g_loss, linewidth=1)
-    axis[1].set_title("Generator Loss")
-    axis[1].set_xlabel("Epochs")
-    axis[1].set_ylabel("Loss")
-
-    # Plotting the Denoiser Loss
-    axis[2].plot(np.arange(len(r_loss)), -r_loss, linewidth=1)  
-    axis[2].set_title("Denoiser Loss")
-    axis[2].set_xlabel("Epochs")
-    axis[2].set_ylabel("Loss")
-
-    plt.tight_layout()
-    plt.show()
-
-
-def print_sample_of_result(denoised,noised,generator,denoiser):#
-
-    #first_batch = next(iter(dataloader))
-    #denoised, noised = first_batch
-    batch_size = int(denoised.shape[0])
-    nb = 5
-    fig, axis = plt.subplots(2, 2)
-
-    axis[0, 0].imshow(np.rot90(denoised[nb]), cmap='gray')
-    axis[0, 0].set_title("Denoised Image")
-    axis[0, 0].axis('off')  
-
-
-    axis[1, 0].imshow(np.rot90(noised[nb]), cmap='gray')
-    axis[1, 0].set_title("Noised Image") 
-    axis[1, 0].axis('off') 
-
-
-    t1 = torch.from_numpy(denoised[nb].numpy()).float()/255.0
-    t1_expanded = t1.unsqueeze(0).expand(batch_size, -1, -1)
-
-    t2 = torch.from_numpy(noised[nb].numpy()).float()/255.0
-    t2_expanded = t2.unsqueeze(0).expand(batch_size, -1, -1)
-
-    fake_im = (generator(t1_expanded).detach().numpy()).squeeze(1)
-    den_im = (denoiser(t2_expanded).detach().numpy()).squeeze(1)
-
-    
-    axis[0,1].imshow(np.rot90(den_im[nb]), cmap='gray')
-    axis[0, 1].set_title("Denoised form Denoiser Image")
-    axis[0, 1].axis('off')
-
-    axis[1,1].imshow(np.rot90(fake_im[nb]), cmap='gray')
-    axis[1, 1].set_title("Generated Image")
-    axis[1, 1].axis('off')
-
-    plt.tight_layout()
-    plt.show()
 
 
 def normalize(X):
@@ -244,23 +170,28 @@ if __name__=="__main__":
     first_batch = next(iter(test_dataloader))
     denoised, noised = first_batch
 
-    generated = normalize((generator(denoised).detach().numpy()).squeeze(1))
-    cleaned = normalize((denoiser(noised).detach().numpy()).squeeze(1))
-        
-    denoised = normalize(denoised.numpy())
-    noised = normalize(noised.numpy())
-    #print_sample_of_result(denoised,noised,generator,denoiser)
+
+    print_sample_of_result(denoised,noised,generator,denoiser)
     #print_sample_of_result(denoised,noised,generator1,denoiser1)
     #print("The accuracy : (denoiser,generator)",accuracy(test_dataloader,generator1,denoiser1))
     #print(metric(test_dataloader,generator,denoiser,mse_for_batch))
+    #print(metric(test_dataloader,generator,denoiser,im_for_batch))
     #print(metric(test_dataloader,generator,denoiser,ssim_fro_batch))
     #print(metric(test_dataloader,generator,denoiser, blur_for_batch))
     #print(AKLD(test_dataloader,generator))
     #training_results('./models/230_7_batch_10_epochs')
     #training_results('./models/t100_n5')
-    print("This is the blur of the original images")
+    """generated = normalize((generator(denoised).detach().numpy()).squeeze(1))
+    cleaned = normalize((denoiser(noised).detach().numpy()).squeeze(1))
+        
+    denoised = normalize(denoised.numpy())
+    noised = normalize(noised.numpy())"""
+
+
+    #print(AKLD_L_images(noised,denoised,noised,L = 5))
+    """print("This is the blur of the original images")
     print(blur_for_batch(noised,denoised))
     print("This is the blur of the original blured images")
     print(blur_for_batch(noised,noised))
     print("This is the blur of the denoised images")
-    print(blur_for_batch(noised,cleaned))
+    print(blur_for_batch(noised,cleaned))"""
